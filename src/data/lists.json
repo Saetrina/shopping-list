@@ -6,9 +6,9 @@
     "listAuthor": "Alice Johnson",
     "members": ["Alice Johnson", "Bob Smith"],
     "items": [
-      { "isCompleted": false, "itemName": "Apples" },
-      { "isCompleted": true, "itemName": "Bread" },
-      { "isCompleted": false, "itemName": "Milk" }
+      { "id": 1, "isCompleted": false, "itemName": "Apples" },
+      { "id": 2, "isCompleted": true, "itemName": "Bread" },
+      { "id": 3, "isCompleted": false, "itemName": "Milk" }
     ],
     "isArchived": false
   },
@@ -19,9 +19,9 @@
     "listAuthor": "Charlie Brown",
     "members": ["Charlie Brown", "Diana Prince"],
     "items": [
-      { "isCompleted": true, "itemName": "Design Mockup" },
-      { "isCompleted": false, "itemName": "Develop Frontend" },
-      { "isCompleted": false, "itemName": "Test Application" }
+      { "id": 1, "isCompleted": true, "itemName": "Design Mockup" },
+      { "id": 2, "isCompleted": false, "itemName": "Develop Frontend" },
+      { "id": 3, "isCompleted": false, "itemName": "Test Application" }
     ],
     "isArchived": false
   },
@@ -32,100 +32,9 @@
     "listAuthor": "Eva Green",
     "members": ["Eva Green"],
     "items": [
-      { "isCompleted": false, "itemName": "Hiking" },
-      { "isCompleted": false, "itemName": "Movie Night" },
-      { "isCompleted": false, "itemName": "Dinner with Friends" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 4,
-    "listName": "Reading List",
-    "dateCreated": "2024-10-15",
-    "listAuthor": "Frank Castle",
-    "members": ["Frank Castle", "Clara Oswald"],
-    "items": [
-      { "isCompleted": true, "itemName": "The Great Gatsby" },
-      { "isCompleted": false, "itemName": "1984" },
-      { "isCompleted": false, "itemName": "To Kill a Mockingbird" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 5,
-    "listName": "Travel Itinerary",
-    "dateCreated": "2024-10-20",
-    "listAuthor": "George Lucas",
-    "members": ["George Lucas", "Leia Organa"],
-    "items": [
-      { "isCompleted": false, "itemName": "Book Flights" },
-      { "isCompleted": true, "itemName": "Reserve Hotel" },
-      { "isCompleted": false, "itemName": "Plan Activities" }
-    ],
-    "isArchived": true
-  },
-  {
-    "id": 6,
-    "listName": "Workout Routine",
-    "dateCreated": "2024-10-25",
-    "listAuthor": "Hannah Baker",
-    "members": ["Hannah Baker", "Jake Peralta"],
-    "items": [
-      { "isCompleted": true, "itemName": "Cardio" },
-      { "isCompleted": false, "itemName": "Strength Training" },
-      { "isCompleted": false, "itemName": "Yoga" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 7,
-    "listName": "Birthday Party",
-    "dateCreated": "2024-10-28",
-    "listAuthor": "Ivy League",
-    "members": ["Ivy League", "John Doe"],
-    "items": [
-      { "isCompleted": false, "itemName": "Send Invitations" },
-      { "isCompleted": false, "itemName": "Order Cake" },
-      { "isCompleted": false, "itemName": "Decorate Venue" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 8,
-    "listName": "Home Renovation",
-    "dateCreated": "2024-10-29",
-    "listAuthor": "James Bond",
-    "members": ["James Bond", "Lara Croft"],
-    "items": [
-      { "isCompleted": true, "itemName": "Design Layout" },
-      { "isCompleted": false, "itemName": "Purchase Materials" },
-      { "isCompleted": false, "itemName": "Hire Contractor" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 9,
-    "listName": "Shopping List",
-    "dateCreated": "2024-10-30",
-    "listAuthor": "Kevin Hart",
-    "members": ["Kevin Hart", "Michael Scott"],
-    "items": [
-      { "isCompleted": false, "itemName": "T-shirts" },
-      { "isCompleted": true, "itemName": "Jeans" },
-      { "isCompleted": false, "itemName": "Shoes" }
-    ],
-    "isArchived": false
-  },
-  {
-    "id": 10,
-    "listName": "Study Schedule",
-    "dateCreated": "2024-10-31",
-    "listAuthor": "Lucy Liu",
-    "members": ["Lucy Liu", "Nina Dobrev"],
-    "items": [
-      { "isCompleted": false, "itemName": "Review Notes" },
-      { "isCompleted": false, "itemName": "Practice Problems" },
-      { "isCompleted": false, "itemName": "Group Study" }
+      { "id": 1, "isCompleted": false, "itemName": "Hiking" },
+      { "id": 2, "isCompleted": false, "itemName": "Movie Night" },
+      { "id": 3, "isCompleted": false, "itemName": "Dinner with Friends" }
     ],
     "isArchived": false
   }

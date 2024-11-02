@@ -13,10 +13,9 @@ const ListThumbnail = ({ list }: { list: IList }) => {
     ${isArchived ? "text-gray-400" : "bg-neutral-50 text-neutral-800"}`}
     >
       <h2 className={"text-xl w-full"}>{listName}</h2>
-      <p className={"flex gap-2 text-lg"}>
-        <h3 className={""}>{listAuthor}</h3>•
-        <h3 className={""}>{dateCreated}</h3>
-      </p>
+      <div className={"flex gap-2 text-lg"}>
+        <h3>{listAuthor}</h3>•<h3>{dateCreated}</h3>
+      </div>
       <FaRegArrowAltCircleRight
         size={28}
         className={"absolute right-4 top-1/2 -translate-y-1/2"}

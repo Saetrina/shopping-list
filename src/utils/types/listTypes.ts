@@ -11,4 +11,5 @@ export interface IList {
 export interface IListItem {
   isCompleted: boolean;
   itemName: string;
+  id: number;
 }

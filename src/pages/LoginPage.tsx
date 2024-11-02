@@ -1,26 +1,44 @@
 import { BaseSyntheticEvent, useEffect, useState } from "react";
+import users from "../data/users.json" assert { type: "json" };
+import { useUserContext } from "../context/UserContextProvider";
+import { useNavigate } from "react-router";
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const myFunc = () => {
-    console.log(username);
-  };
+  const [isError, setIsError] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  useEffect(myFunc, [username, password]);
+  useEffect(() => {
+    if (username && password) setIsDisabled(false);
+  }, [username, password]);
+
+  const { setUser } = useUserContext();
+
+  const navigate = useNavigate();
 
   const handleSubmit = (event: BaseSyntheticEvent) => {
     event.preventDefault();
 
-    const formData = {
-      username,
-      password,
-    };
+    setIsDisabled(true);
 
-    console.log(formData);
+    setTimeout(() => {
+      const user = users.find(
+        (user) => user.username === username && user.password === password
+      );
 
-    //TODO: login api
+      if (!user) {
+        setIsError(true);
+      } else {
+        setUser(user);
+        navigate("/");
+      }
+
+      //TODO: login api
+
+      setIsDisabled(false);
+    }, 1000);
   };
 
   return (
@@ -34,7 +52,9 @@ const LoginPage = () => {
         <h1 className={"text-center mb-4 text-2xl"}>Přihlášení</h1>
 
         <input
-          className={"border px-3 rounded-md py-1 border-lime-800"}
+          className={`border px-3 rounded-md py-1 outline-0 ${
+            isError ? "border-red-600" : "border-lime-800"
+          }`}
           placeholder="Přihlašovací jméno"
           value={username}
           onChange={(event: BaseSyntheticEvent) => {
@@ -42,7 +62,9 @@ const LoginPage = () => {
           }}
         />
         <input
-          className={"border px-3 rounded-md py-1 border-lime-800"}
+          className={`border px-3 rounded-md py-1 outline-0 ${
+            isError ? "border-red-600" : "border-lime-800"
+          }`}
           type={"password"}
           placeholder="Heslo"
           value={password}
@@ -51,9 +73,10 @@ const LoginPage = () => {
           }}
         />
         <button
-          className={
-            "border px-3 rounded-md py-2 bg-lime-800 text-white uppercase font-bold"
-          }
+          disabled={isDisabled}
+          className={`border px-3 bg-lime-800 rounded-md py-2 text-white uppercase font-bold ${
+            isDisabled ? "opacity-30" : "opacity-100"
+          }`}
         >
           Přihlásit se
         </button>

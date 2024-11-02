@@ -1,0 +1,52 @@
+[
+  {
+    "username": "user",
+    "password": "password",
+    "fullName": "Alice Johnson"
+  },
+  {
+    "username": "asmith",
+    "password": "mypassword",
+    "fullName": "Alice Smith"
+  },
+  {
+    "username": "bwayne",
+    "password": "batcave42",
+    "fullName": "Bruce Wayne"
+  },
+  {
+    "username": "ckent",
+    "password": "krypton7",
+    "fullName": "Clark Kent"
+  },
+  {
+    "username": "pparker",
+    "password": "sp1derman",
+    "fullName": "Peter Parker"
+  },
+  {
+    "username": "dprince",
+    "password": "themyscira99",
+    "fullName": "Diana Prince"
+  },
+  {
+    "username": "tstark",
+    "password": "ironman123",
+    "fullName": "Tony Stark"
+  },
+  {
+    "username": "sluthor",
+    "password": "lex2024",
+    "fullName": "Lex Luthor"
+  },
+  {
+    "username": "sbarnes",
+    "password": "winter123",
+    "fullName": "Bucky Barnes"
+  },
+  {
+    "username": "nromanoff",
+    "password": "blackwidow42",
+    "fullName": "Natasha Romanoff"
+  }
+]

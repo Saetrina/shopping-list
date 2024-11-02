@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router";
+import { useUserContext } from "../../context/UserContextProvider";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
+  const { user } = useUserContext();
 
   return (
     <section
@@ -15,7 +18,7 @@ const Navbar = () => {
         }
         onClick={() => navigate("/login")}
       >
-        Login
+        {user ? user.fullName : "Login"}
       </button>
     </section>
   );
