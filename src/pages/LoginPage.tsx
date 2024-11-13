@@ -42,10 +42,10 @@ const LoginPage = () => {
   };
 
   return (
-    <div className={"flex items-center h-full"}>
+    <div className={"flex items-center justify-center h-full w-full"}>
       <form
         className={
-          "flex flex-col gap-4 text-lg border border-dashed border-lime-700 px-8 py-8 rounded-lg shadow-lg"
+          "flex flex-col gap-4 text-lg sm:border sm:h-fit sm:w-fit border-dashed border-lime-700 px-8 py-8 rounded-lg shadow-lg w-full h-full"
         }
         onSubmit={handleSubmit}
       >

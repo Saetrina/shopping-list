@@ -10,7 +10,11 @@ function App() {
   return (
     <BrowserRouter>
       <UserContextProvider>
-        <div className={"h-screen flex flex-col items-center"}>
+        <div
+          className={
+            "h-screen flex flex-col items-center overflow-hidden md:gap-12"
+          }
+        >
           <Navbar />
           <Routes>
             <Route path={"/"} element={<MainPage />} />

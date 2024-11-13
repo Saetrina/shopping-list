@@ -37,5 +37,53 @@
       { "id": 3, "isCompleted": false, "itemName": "Dinner with Friends" }
     ],
     "isArchived": false
-  }
+  },  {
+  "id": 4,
+  "listName": "Project Tasks",
+  "dateCreated": "2024-10-05",
+  "listAuthor": "Charlie Brown",
+  "members": ["Charlie Brown", "Diana Prince"],
+  "items": [
+    { "id": 1, "isCompleted": true, "itemName": "Design Mockup" },
+    { "id": 2, "isCompleted": false, "itemName": "Develop Frontend" },
+    { "id": 3, "isCompleted": false, "itemName": "Test Application" }
+  ],
+  "isArchived": false
+},  {
+  "id": 5,
+  "listName": "Project Tasks",
+  "dateCreated": "2024-10-05",
+  "listAuthor": "Charlie Brown",
+  "members": ["Charlie Brown", "Diana Prince"],
+  "items": [
+    { "id": 1, "isCompleted": true, "itemName": "Design Mockup" },
+    { "id": 2, "isCompleted": false, "itemName": "Develop Frontend" },
+    { "id": 3, "isCompleted": false, "itemName": "Test Application" }
+  ],
+  "isArchived": true
+},  {
+  "id": 6,
+  "listName": "Project Tasks",
+  "dateCreated": "2024-10-05",
+  "listAuthor": "Charlie Brown",
+  "members": ["Charlie Brown", "Diana Prince"],
+  "items": [
+    { "id": 1, "isCompleted": true, "itemName": "Design Mockup" },
+    { "id": 2, "isCompleted": false, "itemName": "Develop Frontend" },
+    { "id": 3, "isCompleted": false, "itemName": "Test Application" }
+  ],
+  "isArchived": false
+},  {
+  "id": 7,
+  "listName": "Project Tasks",
+  "dateCreated": "2024-10-05",
+  "listAuthor": "Charlie Brown",
+  "members": ["Charlie Brown", "Diana Prince"],
+  "items": [
+    { "id": 1, "isCompleted": true, "itemName": "Design Mockup" },
+    { "id": 2, "isCompleted": false, "itemName": "Develop Frontend" },
+    { "id": 3, "isCompleted": false, "itemName": "Test Application" }
+  ],
+  "isArchived": true
+}
 ]

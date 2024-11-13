@@ -1,6 +1,8 @@
 import { IList } from "../../utils/types/listTypes.ts";
-import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router";
+import dayjs from "dayjs";
+import IconButton from "../buttons/iconButton.tsx";
 
 const ListThumbnail = ({ list }: { list: IList }) => {
   const { dateCreated, listAuthor, isArchived, listName, id } = list;
@@ -14,11 +16,11 @@ const ListThumbnail = ({ list }: { list: IList }) => {
     >
       <h2 className={"text-xl w-full"}>{listName}</h2>
       <div className={"flex gap-2 text-lg"}>
-        <h3>{listAuthor}</h3>•<h3>{dateCreated}</h3>
+        <h3>{listAuthor}</h3>•<h3>{dayjs(dateCreated).format("D. M. YYYY")}</h3>
       </div>
-      <FaRegArrowAltCircleRight
-        size={28}
-        className={"absolute right-4 top-1/2 -translate-y-1/2"}
+      <IconButton
+        icon={<FaArrowRight color={"gray"} />}
+        className="absolute right-4 top-1/2 -translate-y-1/2"
       />
     </div>
   );

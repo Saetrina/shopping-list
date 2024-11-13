@@ -1,13 +1,13 @@
 import lists from "../../../data/lists.json" assert { type: "json" };
 import { BaseSyntheticEvent, useEffect, useState } from "react";
-import { Navigate, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { GiCrossMark } from "react-icons/gi";
 import { IList, IListItem } from "../../../utils/types/listTypes.ts";
 import ListItem from "./ListItem.tsx";
 import { FaPen } from "react-icons/fa";
 import { useUserContext } from "../../../context/UserContextProvider.tsx";
 import dayjs from "dayjs";
-import { IoLogOutSharp } from "react-icons/io5";
+import { IoLogOutSharp, IoTrashOutline } from "react-icons/io5";
 
 const ListDetail = () => {
   const params = useParams();
@@ -35,7 +35,7 @@ const ListDetail = () => {
     if (!user) return;
 
     const updatedItems = list.items.map((item) =>
-      item.id === itemId ? { ...item, isCompleted: !item.isCompleted } : item
+      item.id === itemId ? { ...item, isCompleted: !item.isCompleted } : item,
     );
 
     setList((prevData) => ({ ...prevData, items: updatedItems }));
@@ -72,10 +72,12 @@ const ListDetail = () => {
     if (user && list) setIsAuthor(user.fullName === list.listAuthor);
   }, [user, list]);
 
+  if (!list) return null;
+
   return (
     <section
       className={
-        "border py-12 px-16 rounded-md flex flex-col gap-6 shadow-lg w-[600px] overflow-hidden"
+        "border px-8 py-8 w-full h-full md:w-fit rounded-md flex flex-col gap-6 shadow-lg overflow-hidden"
       }
     >
       <div>
@@ -100,7 +102,13 @@ const ListDetail = () => {
               color="red"
               size={24}
             />
-          ) : null}
+          ) : (
+            <IoTrashOutline
+              onClick={() => navigate("/")}
+              color="red"
+              size={24}
+            />
+          )}
         </div>
         <div className="flex gap-2">
           <h3>{list.listAuthor}</h3>•
@@ -179,7 +187,7 @@ const ListDetail = () => {
           {list.items
             ? list.items
                 .filter((item) =>
-                  showAllItems ? true : item.isCompleted === false
+                  showAllItems ? true : item.isCompleted === false,
                 )
                 .map((item, idx) => {
                   return (

@@ -2,9 +2,10 @@ import ListDetail from "../components/lists/listDetail/ListDetail.tsx";
 
 const ListDetailPage = () => {
   return (
-    <div>
+      <div className={"w-full h-full flex flex-col items-center"}>
       <ListDetail />
-    </div>
+      </div>
+
   );
 };
 
